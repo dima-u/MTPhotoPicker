@@ -20,12 +20,6 @@
     "Pod/Classes/**/*"
   ],
   "resources": [
-    "Pod/Assets/*.xib"
-  ],
-  "resource_bundles": {
-    "MTPhotoPicker": [
-      "Pod/Assets/*.png",
-      "Pod/Assets/*.xib"
-    ]
-  }
+    "Pod/Assets/**/*"
+  ]
 }
