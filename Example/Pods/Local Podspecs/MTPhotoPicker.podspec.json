@@ -24,7 +24,8 @@
   ],
   "resource_bundles": {
     "MTPhotoPicker": [
-      "Pod/Assets/*.png"
+      "Pod/Assets/*.png",
+      "Pod/Assets/*.xib"
     ]
   }
 }
