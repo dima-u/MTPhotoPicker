@@ -378,7 +378,7 @@
     NSInteger cnt = [markedAssets count];
     
     if(cnt > 0){
-        [self.firstButton setTitle:[NSString stringWithFormat:kPPickerSendPhotosText,cnt] forState:UIControlStateNormal];
+        [self.firstButton setTitle:[NSString stringWithFormat:kPPickerSendPhotosText,(long)cnt] forState:UIControlStateNormal];
         [self.secondButton setTitle:@"" forState:UIControlStateNormal];
         self.secondButton.enabled = NO;
     }else{

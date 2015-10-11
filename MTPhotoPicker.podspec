@@ -24,7 +24,7 @@ PhotoPicker allows you to integrate imessage style photo selection view in a sev
   # s.screenshots     = "https://raw.githubusercontent.com/dima-u/MTPhotoPicker/master/Screenshots/example.gif"
   s.license          = 'MIT'
   s.author           = { "Ulyanov Dmitry" => "dima-u@inbox.ru" }
-  s.source           = { :git => "https://github.com/dima-u/MTPhotoPicker.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/dima-u/MTPhotoPicker.git", :commit => "7bfb836ae78955845fce2eb1ac794d36b4b27305" }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
