@@ -32,10 +32,10 @@
         
         
     
-        NSBundle *bundle = [NSBundle bundleWithURL:[
-                                                    [NSBundle mainBundle] URLForResource:@"MTPhotoPicker" withExtension:@"bundle"]];
+   //     NSBundle *bundle = [NSBundle bundleWithURL:[
+   //                                                 [NSBundle mainBundle] URLForResource:@"MTPhotoPicker" withExtension:@"bundle"]];
         
-        _attachView =  [[bundle loadNibNamed:@"MTPhotoPicker" owner:self options:nil] objectAtIndex:0];
+        _attachView =  [[[NSBundle mainBundle] loadNibNamed:@"MTPhotoPicker" owner:self options:nil] objectAtIndex:0];
         [_attachView setDelegate:self];
     }
     return _attachView;
