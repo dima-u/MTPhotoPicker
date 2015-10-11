@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "MTPhotoPicker"
   s.version          = "0.1.0"
-  s.summary          = "A short description of MTPhotoPicker."
+  s.summary          = "iMessage style photopicker with visual effects."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,13 +17,14 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+PhotoPicker allows you to integrate imessage style photo selection view in a several lines of code
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/MTPhotoPicker"
+  s.homepage         = "https://github.com/dima-u/MTPhotoPicker"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Ulyanov Dmitry" => "dima-u@inbox.ru" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/MTPhotoPicker.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/dima-u/MTPhotoPicker.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'

@@ -1,0 +1,14 @@
+PODS:
+  - MTPhotoPicker (0.1.0)
+
+DEPENDENCIES:
+  - MTPhotoPicker (from `../`)
+
+EXTERNAL SOURCES:
+  MTPhotoPicker:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MTPhotoPicker: b2f3145f109bea6567da8b551e37b6019f713947
+
+COCOAPODS: 0.38.2
