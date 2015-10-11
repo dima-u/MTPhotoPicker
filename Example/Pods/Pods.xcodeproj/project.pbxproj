@@ -7,209 +7,243 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		192DEBC3B9526CFCCC75765E4DD30B41 /* Pods-MTPhotoPicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C4D84FADD21D9645DE2B0F88578B6C /* Pods-MTPhotoPicker_Tests-dummy.m */; };
-		1A9801111447274E90D97BBF5AFBEA4C /* MTPhotoPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593ACD34F6662A008BDD1CD05585393 /* MTPhotoPicker-dummy.m */; };
-		2AFB3FC1E9C5E013CF831E1B539FFA55 /* MTPhotoPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AEAA9A293DD769DF8C5A76F31506D94 /* MTPhotoPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B5E8B626AFBE670BD28EAA4E95F100C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4116867075EC229EE491CCFD7803B66B /* Foundation.framework */; };
-		5126A8EB1524927A54479F030AD2C22B /* Pods-MTPhotoPicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F89E0AE8EA29136E69DD0AF2A667CF08 /* Pods-MTPhotoPicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		647B71ACD64E5947129ADB981A1B6B6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4116867075EC229EE491CCFD7803B66B /* Foundation.framework */; };
-		66B62D225046DACC8C8F34B0A47AB5EA /* Pods-MTPhotoPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DE5BA17E26126DCEF4FDB2001C60B05 /* Pods-MTPhotoPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A785B3D97767691F10685E04B54A2D93 /* MTPhotoPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4CA25B73C252574626B2B0D40F6A3A3A /* MTPhotoPicker.bundle */; };
-		AD2C9F1923A465FAD58329D66C390D7D /* Pods-MTPhotoPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE7F58F9B3381573533C8BC5BF4E90C /* Pods-MTPhotoPicker_Example-dummy.m */; };
-		BAE76CB493B7356A2A52E79970E2F8CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4116867075EC229EE491CCFD7803B66B /* Foundation.framework */; };
-		C306ADD4E64910F6CD03FC3ACF45E10F /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = BC921D3778F89067606CCFFD061078B4 /* ReplaceMe.m */; };
+		0D8CEB303C1FF19084138C47527E0DA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191AA7984C54B4BDFDDF0BE18D0316DD /* Foundation.framework */; };
+		19BF35A15C0B353D9E509CB87AEDC199 /* MTPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DE65491F79250D5815F6F0C69CE866 /* MTPhotoPicker.m */; };
+		25B120010D26E9C3FAC304C58D4E818A /* Pods-MTPhotoPicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07094450F57770E7694ABACE4EF8AF48 /* Pods-MTPhotoPicker_Tests-dummy.m */; };
+		2BE895977058E80D5F822013126FB86E /* MTCheckmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C157F06EA8F15FA8F9BAB83A54040BF /* MTCheckmarkView.m */; };
+		307426DA6ED1A626D10659C0196B4331 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191AA7984C54B4BDFDDF0BE18D0316DD /* Foundation.framework */; };
+		376961392A0B849B4C86BDB5A2937426 /* MTCheckmarkView.h in Headers */ = {isa = PBXBuildFile; fileRef = D4258F089E1BF9CBCBFD3338EDBCBE3A /* MTCheckmarkView.h */; };
+		4ED1010C117AD8C53AE7E0D80D117005 /* MTPhotoPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9569575769756EA91299CCD1A29279BA /* MTPhotoPicker.h */; };
+		6EAC976BD334AD695CD388DB13026485 /* MTAttachCollectionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 01F25D84B289DCB0405E028653A343FF /* MTAttachCollectionCell.h */; };
+		73D868F9314AF752F43931666D6ED0C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191AA7984C54B4BDFDDF0BE18D0316DD /* Foundation.framework */; };
+		8A383C3AECBB7475DB45984C62C8A83A /* MTPhotoPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9554FA26678269D904B9668938B53F /* MTPhotoPicker-dummy.m */; };
+		C627531E1D2912694AFEC262086B83BB /* MTAttachCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E46D08F1699C943DF5217555EB3C70B /* MTAttachCollectionCell.m */; };
+		EECBC3914364D980957325FCADD1D365 /* Pods-MTPhotoPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7BA88D02DF24F1A8635ECE63A2A9EA /* Pods-MTPhotoPicker_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7562E8EC0A9AA09DCADBC6CA16911AE5 /* PBXContainerItemProxy */ = {
+		549FA58C639DDBEBBF7B27865603F339 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8EF953A9259CB1882EDFBA16CC51C078;
+			remoteGlobalIDString = 0B63C18E6A85D20C89A76EEF4F31807D;
 			remoteInfo = MTPhotoPicker;
 		};
-		9CE682CC5A55E149EF64D1A21E706B67 /* PBXContainerItemProxy */ = {
+		609AB5D5B46F672CDD72D08F28E0F8B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 25E53134AB46E0E73FDBE92C0BF49E30;
+			remoteGlobalIDString = 0B63C18E6A85D20C89A76EEF4F31807D;
+			remoteInfo = MTPhotoPicker;
+		};
+		C541FC4FE73793C5F51EE098A00EC349 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A3080D60D59B03A0E9294AF9A45449E;
 			remoteInfo = "MTPhotoPicker-MTPhotoPicker";
-		};
-		D2B419C8562BE59B6EACE931AED4C4B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EF953A9259CB1882EDFBA16CC51C078;
-			remoteInfo = MTPhotoPicker;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0DA966AFF29B30CD2BAFE96C3B49ED66 /* Pods-MTPhotoPicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MTPhotoPicker_Example.modulemap"; sourceTree = "<group>"; };
-		12089965A46031508C7FB8F834895A64 /* Pods-MTPhotoPicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTPhotoPicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		26C4D84FADD21D9645DE2B0F88578B6C /* Pods-MTPhotoPicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MTPhotoPicker_Tests-dummy.m"; sourceTree = "<group>"; };
-		2BBCB44BB112D7FCEB3258D4C246E5FB /* Pods-MTPhotoPicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTPhotoPicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		3C747C8C335560B0D406DE14C13398F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EA0653939B4FACA28A0A9789916D787 /* Pods-MTPhotoPicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTPhotoPicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		4116867075EC229EE491CCFD7803B66B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4CA25B73C252574626B2B0D40F6A3A3A /* MTPhotoPicker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTPhotoPicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EE05F33A8942D2FE363A6EA1DB278D8 /* Pods-MTPhotoPicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTPhotoPicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4EED2762BE014A68AC610ACCB982EAB9 /* Pods-MTPhotoPicker_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTPhotoPicker_Example-resources.sh"; sourceTree = "<group>"; };
-		5473419670832605D02700895E2E1361 /* Pods-MTPhotoPicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MTPhotoPicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7593ACD34F6662A008BDD1CD05585393 /* MTPhotoPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MTPhotoPicker-dummy.m"; sourceTree = "<group>"; };
-		7AEAA9A293DD769DF8C5A76F31506D94 /* MTPhotoPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MTPhotoPicker-umbrella.h"; sourceTree = "<group>"; };
-		7E0289A337379E580A54DFDA6EC7BDDF /* MTPhotoPicker-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MTPhotoPicker-Private.xcconfig"; sourceTree = "<group>"; };
-		80512A31ADCD81A3A9C781FCA45F032E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81CDE268D3D31F54A01C806D7600C0B3 /* Pods-MTPhotoPicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTPhotoPicker_Example-frameworks.sh"; sourceTree = "<group>"; };
-		8DE5BA17E26126DCEF4FDB2001C60B05 /* Pods-MTPhotoPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MTPhotoPicker_Example-umbrella.h"; sourceTree = "<group>"; };
-		A54027DD17E01DDA58F86E7EEE5FA265 /* Pods-MTPhotoPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTPhotoPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		A803415DD5BE0AA69FE6823014777F31 /* Pods-MTPhotoPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTPhotoPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A88333A7A8E25C8180919B44DC18BDE3 /* MTPhotoPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MTPhotoPicker.modulemap; sourceTree = "<group>"; };
-		AACDBE492A8FAA0A81619FC2B7478495 /* MTPhotoPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MTPhotoPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B13F84097DF3B8049445C5E844DA7C59 /* Pods-MTPhotoPicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MTPhotoPicker_Tests.modulemap"; sourceTree = "<group>"; };
+		0038681A1F9B88DB1362C844FDD2D554 /* Pods-MTPhotoPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTPhotoPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		01F25D84B289DCB0405E028653A343FF /* MTAttachCollectionCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTAttachCollectionCell.h; sourceTree = "<group>"; };
+		07094450F57770E7694ABACE4EF8AF48 /* Pods-MTPhotoPicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MTPhotoPicker_Tests-dummy.m"; sourceTree = "<group>"; };
+		1322CD5002E7F44EE610B91D6BBB6238 /* MTPhotoPicker-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MTPhotoPicker-Private.xcconfig"; sourceTree = "<group>"; };
+		191AA7984C54B4BDFDDF0BE18D0316DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		312EFC667FBCEFC9C96EE0C06F0338D9 /* Pods-MTPhotoPicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTPhotoPicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		36EA701CB40ECF619EC62A09287BE9D9 /* Pods-MTPhotoPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTPhotoPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		37164703102052D2DFCE9B39691A3D58 /* libMTPhotoPicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMTPhotoPicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		38BE3E1C3BCC39518C5611726E2A8B5E /* Pods-MTPhotoPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTPhotoPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3C49A4FB4269A33432EEEA5EB95AD9FB /* Pods-MTPhotoPicker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTPhotoPicker_Tests-resources.sh"; sourceTree = "<group>"; };
+		447C87DD52BD17BD1AD12CBE2E7FFF62 /* Pods-MTPhotoPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MTPhotoPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4DC71910D2E0CA1CBE9F237E17AD432E /* Pods-MTPhotoPicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MTPhotoPicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4ECE1952F9079657769BC6AF55088B42 /* MTPhotoPicker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTPhotoPicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		55354B788F3933E34F0861C30C0409B2 /* MTPhotoPicker.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = MTPhotoPicker.xib; sourceTree = "<group>"; };
+		8E46D08F1699C943DF5217555EB3C70B /* MTAttachCollectionCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MTAttachCollectionCell.m; sourceTree = "<group>"; };
+		94ADBCF81FF76745477A6F83C73E1551 /* Pods-MTPhotoPicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTPhotoPicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9569575769756EA91299CCD1A29279BA /* MTPhotoPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTPhotoPicker.h; sourceTree = "<group>"; };
+		95EB454DD981D7CD4F05937EA1FD6E65 /* Pods-MTPhotoPicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTPhotoPicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9C157F06EA8F15FA8F9BAB83A54040BF /* MTCheckmarkView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MTCheckmarkView.m; sourceTree = "<group>"; };
+		AF5EA3A2986623759E2996804C81188F /* MTPhotoPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MTPhotoPicker.xcconfig; sourceTree = "<group>"; };
+		B0DE65491F79250D5815F6F0C69CE866 /* MTPhotoPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MTPhotoPicker.m; sourceTree = "<group>"; };
+		B58E8033D5A60967673D97DD5B54EE2F /* MTPhotoPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MTPhotoPicker-prefix.pch"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BB97D9DBB49909BE943B9D938BBC7A00 /* Pods_MTPhotoPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTPhotoPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC921D3778F89067606CCFFD061078B4 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
-		BCE7F58F9B3381573533C8BC5BF4E90C /* Pods-MTPhotoPicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MTPhotoPicker_Example-dummy.m"; sourceTree = "<group>"; };
-		BFD9306989AB6F4E4C912A9A6D3A8524 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8DB245ED612A52EBBAC0DBCC5E4EC44 /* Pods_MTPhotoPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTPhotoPicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5D5A15C7E5AD9A44E0E539DC09867EA /* MTPhotoPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MTPhotoPicker-prefix.pch"; sourceTree = "<group>"; };
-		DA8578B9C4BFD607BA2492D2F3D0AFBC /* Pods-MTPhotoPicker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTPhotoPicker_Tests-resources.sh"; sourceTree = "<group>"; };
-		DD7175B77DA604ADC6996FF2D1B7929F /* MTPhotoPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MTPhotoPicker.xcconfig; sourceTree = "<group>"; };
-		E9140640E9E84EC10FEDBF2CD40F98BE /* Pods-MTPhotoPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MTPhotoPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F89E0AE8EA29136E69DD0AF2A667CF08 /* Pods-MTPhotoPicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MTPhotoPicker_Tests-umbrella.h"; sourceTree = "<group>"; };
-		FB10501933F6BF94FA34C3AF5AF025E7 /* Pods-MTPhotoPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTPhotoPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
+		BF9554FA26678269D904B9668938B53F /* MTPhotoPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MTPhotoPicker-dummy.m"; sourceTree = "<group>"; };
+		C24FB5AE183790113E784438A6BE7543 /* libPods-MTPhotoPicker_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTPhotoPicker_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7BA88D02DF24F1A8635ECE63A2A9EA /* Pods-MTPhotoPicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MTPhotoPicker_Example-dummy.m"; sourceTree = "<group>"; };
+		D4258F089E1BF9CBCBFD3338EDBCBE3A /* MTCheckmarkView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTCheckmarkView.h; sourceTree = "<group>"; };
+		D525425F4281E206FDC4F5E8CD77738E /* libPods-MTPhotoPicker_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTPhotoPicker_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB13B43B206C30D774B79779F1FB1EA5 /* MTAttachCollectionCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = MTAttachCollectionCell.xib; sourceTree = "<group>"; };
+		FFBCC3E5678E694438DE1081A1CFD03C /* Pods-MTPhotoPicker_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTPhotoPicker_Example-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1FD84B95A4A95B0FF570F7E797E75193 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				647B71ACD64E5947129ADB981A1B6B6C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		59929A907651BAA94B76563D530354E3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BAE76CB493B7356A2A52E79970E2F8CF /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		758496B2940EE0E9DC84F5736AA2EB68 /* Frameworks */ = {
+		5E02B9E855A5770B24D3AACCB1E9E010 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		837E1C30D84C4506843F233974068C21 /* Frameworks */ = {
+		8E52EDFD8170D8EF5B9AE9BB9C09BE44 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B5E8B626AFBE670BD28EAA4E95F100C /* Foundation.framework in Frameworks */,
+				307426DA6ED1A626D10659C0196B4331 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1280345DF76703F8394D9092A07AD26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73D868F9314AF752F43931666D6ED0C2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9862F23015437BA4D272ECD6F2A1203 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D8CEB303C1FF19084138C47527E0DA1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11E35F6595CB5EF197D156D5C81BF2AD /* Development Pods */ = {
+		00A2BA32488D63DB98217387DC22C2E8 /* Pods-MTPhotoPicker_Example */ = {
 			isa = PBXGroup;
 			children = (
-				59396004FE531D6677A5D9F7339C6FFE /* MTPhotoPicker */,
+				447C87DD52BD17BD1AD12CBE2E7FFF62 /* Pods-MTPhotoPicker_Example-acknowledgements.markdown */,
+				36EA701CB40ECF619EC62A09287BE9D9 /* Pods-MTPhotoPicker_Example-acknowledgements.plist */,
+				CC7BA88D02DF24F1A8635ECE63A2A9EA /* Pods-MTPhotoPicker_Example-dummy.m */,
+				FFBCC3E5678E694438DE1081A1CFD03C /* Pods-MTPhotoPicker_Example-resources.sh */,
+				0038681A1F9B88DB1362C844FDD2D554 /* Pods-MTPhotoPicker_Example.debug.xcconfig */,
+				38BE3E1C3BCC39518C5611726E2A8B5E /* Pods-MTPhotoPicker_Example.release.xcconfig */,
 			);
-			name = "Development Pods";
+			name = "Pods-MTPhotoPicker_Example";
+			path = "Target Support Files/Pods-MTPhotoPicker_Example";
 			sourceTree = "<group>";
 		};
-		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+		19B1D33ACA67056E04B2AB651AE292B5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4116867075EC229EE491CCFD7803B66B /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		54E9790429859151B9FD5115777B098D /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				BC921D3778F89067606CCFFD061078B4 /* ReplaceMe.m */,
+				01F25D84B289DCB0405E028653A343FF /* MTAttachCollectionCell.h */,
+				8E46D08F1699C943DF5217555EB3C70B /* MTAttachCollectionCell.m */,
+				D4258F089E1BF9CBCBFD3338EDBCBE3A /* MTCheckmarkView.h */,
+				9C157F06EA8F15FA8F9BAB83A54040BF /* MTCheckmarkView.m */,
+				9569575769756EA91299CCD1A29279BA /* MTPhotoPicker.h */,
+				B0DE65491F79250D5815F6F0C69CE866 /* MTPhotoPicker.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		59396004FE531D6677A5D9F7339C6FFE /* MTPhotoPicker */ = {
+		23CE8E87983E464405BA97CF3B4DAED3 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				F70BAFC38A1F35C2D214D7E6B8BC451F /* Pod */,
-				63DFC4C68F387DB4352941BC2CA5D178 /* Support Files */,
+				FB13B43B206C30D774B79779F1FB1EA5 /* MTAttachCollectionCell.xib */,
+				55354B788F3933E34F0861C30C0409B2 /* MTPhotoPicker.xib */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		25338695BCADE5A6667C148B98A5855D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				23CE8E87983E464405BA97CF3B4DAED3 /* Assets */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		27978F077BA04AA9E32E1AAAB897C470 /* Pods-MTPhotoPicker_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4DC71910D2E0CA1CBE9F237E17AD432E /* Pods-MTPhotoPicker_Tests-acknowledgements.markdown */,
+				95EB454DD981D7CD4F05937EA1FD6E65 /* Pods-MTPhotoPicker_Tests-acknowledgements.plist */,
+				07094450F57770E7694ABACE4EF8AF48 /* Pods-MTPhotoPicker_Tests-dummy.m */,
+				3C49A4FB4269A33432EEEA5EB95AD9FB /* Pods-MTPhotoPicker_Tests-resources.sh */,
+				94ADBCF81FF76745477A6F83C73E1551 /* Pods-MTPhotoPicker_Tests.debug.xcconfig */,
+				312EFC667FBCEFC9C96EE0C06F0338D9 /* Pods-MTPhotoPicker_Tests.release.xcconfig */,
+			);
+			name = "Pods-MTPhotoPicker_Tests";
+			path = "Target Support Files/Pods-MTPhotoPicker_Tests";
+			sourceTree = "<group>";
+		};
+		2A42CE38F67675B551FD9199C5277B15 /* MTPhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				8C84B13409EF02BB867AB8C9F26491E0 /* Pod */,
+				AD7AE2DBADBF5168F91DE57965C9CEAC /* Resources */,
+				5A286D5115E31CAD4CD8A188AFDD7245 /* Support Files */,
 			);
 			name = MTPhotoPicker;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		63DFC4C68F387DB4352941BC2CA5D178 /* Support Files */ = {
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				BFD9306989AB6F4E4C912A9A6D3A8524 /* Info.plist */,
-				A88333A7A8E25C8180919B44DC18BDE3 /* MTPhotoPicker.modulemap */,
-				DD7175B77DA604ADC6996FF2D1B7929F /* MTPhotoPicker.xcconfig */,
-				7E0289A337379E580A54DFDA6EC7BDDF /* MTPhotoPicker-Private.xcconfig */,
-				7593ACD34F6662A008BDD1CD05585393 /* MTPhotoPicker-dummy.m */,
-				D5D5A15C7E5AD9A44E0E539DC09867EA /* MTPhotoPicker-prefix.pch */,
-				7AEAA9A293DD769DF8C5A76F31506D94 /* MTPhotoPicker-umbrella.h */,
+				191AA7984C54B4BDFDDF0BE18D0316DD /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5A286D5115E31CAD4CD8A188AFDD7245 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF5EA3A2986623759E2996804C81188F /* MTPhotoPicker.xcconfig */,
+				1322CD5002E7F44EE610B91D6BBB6238 /* MTPhotoPicker-Private.xcconfig */,
+				BF9554FA26678269D904B9668938B53F /* MTPhotoPicker-dummy.m */,
+				B58E8033D5A60967673D97DD5B54EE2F /* MTPhotoPicker-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/MTPhotoPicker";
+			sourceTree = "<group>";
+		};
+		678E7415BE7D6B2625A4E65AC82262E6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A42CE38F67675B551FD9199C5277B15 /* MTPhotoPicker */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				11E35F6595CB5EF197D156D5C81BF2AD /* Development Pods */,
+				678E7415BE7D6B2625A4E65AC82262E6 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
-				E69C5E3813626988DA05CAA1D25D9104 /* Targets Support Files */,
+				906D5D39F8DF5E3B3B3F98CB15DD3C3D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9E5A9B0A54CCDB420AE0C5E67DAB3D02 /* Pods-MTPhotoPicker_Example */ = {
+		8C84B13409EF02BB867AB8C9F26491E0 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				3C747C8C335560B0D406DE14C13398F8 /* Info.plist */,
-				0DA966AFF29B30CD2BAFE96C3B49ED66 /* Pods-MTPhotoPicker_Example.modulemap */,
-				E9140640E9E84EC10FEDBF2CD40F98BE /* Pods-MTPhotoPicker_Example-acknowledgements.markdown */,
-				A54027DD17E01DDA58F86E7EEE5FA265 /* Pods-MTPhotoPicker_Example-acknowledgements.plist */,
-				BCE7F58F9B3381573533C8BC5BF4E90C /* Pods-MTPhotoPicker_Example-dummy.m */,
-				81CDE268D3D31F54A01C806D7600C0B3 /* Pods-MTPhotoPicker_Example-frameworks.sh */,
-				4EED2762BE014A68AC610ACCB982EAB9 /* Pods-MTPhotoPicker_Example-resources.sh */,
-				8DE5BA17E26126DCEF4FDB2001C60B05 /* Pods-MTPhotoPicker_Example-umbrella.h */,
-				A803415DD5BE0AA69FE6823014777F31 /* Pods-MTPhotoPicker_Example.debug.xcconfig */,
-				FB10501933F6BF94FA34C3AF5AF025E7 /* Pods-MTPhotoPicker_Example.release.xcconfig */,
+				19B1D33ACA67056E04B2AB651AE292B5 /* Classes */,
 			);
-			name = "Pods-MTPhotoPicker_Example";
-			path = "Target Support Files/Pods-MTPhotoPicker_Example";
+			path = Pod;
 			sourceTree = "<group>";
 		};
-		A2DFADB1FDFFEB0B778F0168F87ADF1C /* Pods-MTPhotoPicker_Tests */ = {
+		906D5D39F8DF5E3B3B3F98CB15DD3C3D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				80512A31ADCD81A3A9C781FCA45F032E /* Info.plist */,
-				B13F84097DF3B8049445C5E844DA7C59 /* Pods-MTPhotoPicker_Tests.modulemap */,
-				5473419670832605D02700895E2E1361 /* Pods-MTPhotoPicker_Tests-acknowledgements.markdown */,
-				2BBCB44BB112D7FCEB3258D4C246E5FB /* Pods-MTPhotoPicker_Tests-acknowledgements.plist */,
-				26C4D84FADD21D9645DE2B0F88578B6C /* Pods-MTPhotoPicker_Tests-dummy.m */,
-				12089965A46031508C7FB8F834895A64 /* Pods-MTPhotoPicker_Tests-frameworks.sh */,
-				DA8578B9C4BFD607BA2492D2F3D0AFBC /* Pods-MTPhotoPicker_Tests-resources.sh */,
-				F89E0AE8EA29136E69DD0AF2A667CF08 /* Pods-MTPhotoPicker_Tests-umbrella.h */,
-				4EE05F33A8942D2FE363A6EA1DB278D8 /* Pods-MTPhotoPicker_Tests.debug.xcconfig */,
-				3EA0653939B4FACA28A0A9789916D787 /* Pods-MTPhotoPicker_Tests.release.xcconfig */,
+				00A2BA32488D63DB98217387DC22C2E8 /* Pods-MTPhotoPicker_Example */,
+				27978F077BA04AA9E32E1AAAB897C470 /* Pods-MTPhotoPicker_Tests */,
 			);
-			name = "Pods-MTPhotoPicker_Tests";
-			path = "Target Support Files/Pods-MTPhotoPicker_Tests";
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AD7AE2DBADBF5168F91DE57965C9CEAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25338695BCADE5A6667C148B98A5855D /* Pod */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -223,68 +257,72 @@
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4CA25B73C252574626B2B0D40F6A3A3A /* MTPhotoPicker.bundle */,
-				AACDBE492A8FAA0A81619FC2B7478495 /* MTPhotoPicker.framework */,
-				BB97D9DBB49909BE943B9D938BBC7A00 /* Pods_MTPhotoPicker_Example.framework */,
-				C8DB245ED612A52EBBAC0DBCC5E4EC44 /* Pods_MTPhotoPicker_Tests.framework */,
+				4ECE1952F9079657769BC6AF55088B42 /* MTPhotoPicker.bundle */,
+				37164703102052D2DFCE9B39691A3D58 /* libMTPhotoPicker.a */,
+				C24FB5AE183790113E784438A6BE7543 /* libPods-MTPhotoPicker_Example.a */,
+				D525425F4281E206FDC4F5E8CD77738E /* libPods-MTPhotoPicker_Tests.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		E69C5E3813626988DA05CAA1D25D9104 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9E5A9B0A54CCDB420AE0C5E67DAB3D02 /* Pods-MTPhotoPicker_Example */,
-				A2DFADB1FDFFEB0B778F0168F87ADF1C /* Pods-MTPhotoPicker_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		F70BAFC38A1F35C2D214D7E6B8BC451F /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				54E9790429859151B9FD5115777B098D /* Classes */,
-			);
-			path = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		03F2310A48547D67DF52EF90B60124E7 /* Headers */ = {
+		0176C1827FC55719BDCCFBA750CD566B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66B62D225046DACC8C8F34B0A47AB5EA /* Pods-MTPhotoPicker_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95DEAE0FCDD4B5090B9E6B6F07BD96A4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5126A8EB1524927A54479F030AD2C22B /* Pods-MTPhotoPicker_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE1776EC73E14908E7FFCCCCE4F0CC3D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2AFB3FC1E9C5E013CF831E1B539FFA55 /* MTPhotoPicker-umbrella.h in Headers */,
+				6EAC976BD334AD695CD388DB13026485 /* MTAttachCollectionCell.h in Headers */,
+				376961392A0B849B4C86BDB5A2937426 /* MTCheckmarkView.h in Headers */,
+				4ED1010C117AD8C53AE7E0D80D117005 /* MTPhotoPicker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		25E53134AB46E0E73FDBE92C0BF49E30 /* MTPhotoPicker-MTPhotoPicker */ = {
+		0B63C18E6A85D20C89A76EEF4F31807D /* MTPhotoPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32BC8CA082FC4207BE910EFBE4E6EC63 /* Build configuration list for PBXNativeTarget "MTPhotoPicker-MTPhotoPicker" */;
+			buildConfigurationList = 88C91BBAC7195F20B77DC3CFB62F87D4 /* Build configuration list for PBXNativeTarget "MTPhotoPicker" */;
 			buildPhases = (
-				85D4F21E5AD3010FB279A8DD0881ABB2 /* Sources */,
-				758496B2940EE0E9DC84F5736AA2EB68 /* Frameworks */,
-				74C83E8459A4F119342435BD25F5366D /* Resources */,
+				0512B6BA6E489CE42A2357A7753A988C /* Sources */,
+				8E52EDFD8170D8EF5B9AE9BB9C09BE44 /* Frameworks */,
+				0176C1827FC55719BDCCFBA750CD566B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0FD7C9041997022A6E9AF28E332C150 /* PBXTargetDependency */,
+			);
+			name = MTPhotoPicker;
+			productName = MTPhotoPicker;
+			productReference = 37164703102052D2DFCE9B39691A3D58 /* libMTPhotoPicker.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1BCBC2B98EB655F47B1F7403DE8C21D1 /* Pods-MTPhotoPicker_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 750429B07BDA3B906FC0BFC3E9BED374 /* Build configuration list for PBXNativeTarget "Pods-MTPhotoPicker_Example" */;
+			buildPhases = (
+				5AEEF7E5E552BE53309269A27D6A8347 /* Sources */,
+				A1280345DF76703F8394D9092A07AD26 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC7F1AA944931BB95079190E4B47361C /* PBXTargetDependency */,
+			);
+			name = "Pods-MTPhotoPicker_Example";
+			productName = "Pods-MTPhotoPicker_Example";
+			productReference = C24FB5AE183790113E784438A6BE7543 /* libPods-MTPhotoPicker_Example.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5A3080D60D59B03A0E9294AF9A45449E /* MTPhotoPicker-MTPhotoPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79C3981F8DAF4224191C62CCB090AF11 /* Build configuration list for PBXNativeTarget "MTPhotoPicker-MTPhotoPicker" */;
+			buildPhases = (
+				1E18F91D3EAFDD8BE26941666015B090 /* Sources */,
+				5E02B9E855A5770B24D3AACCB1E9E010 /* Frameworks */,
+				B0C7F5511C0103EA697EBE272A314BE5 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -292,63 +330,25 @@
 			);
 			name = "MTPhotoPicker-MTPhotoPicker";
 			productName = "MTPhotoPicker-MTPhotoPicker";
-			productReference = 4CA25B73C252574626B2B0D40F6A3A3A /* MTPhotoPicker.bundle */;
+			productReference = 4ECE1952F9079657769BC6AF55088B42 /* MTPhotoPicker.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		8EF953A9259CB1882EDFBA16CC51C078 /* MTPhotoPicker */ = {
+		BB02B5F0E6FF65B685C40DDB2002726C /* Pods-MTPhotoPicker_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6EE5F638CA4EE81C5DFC0BC790EDB81F /* Build configuration list for PBXNativeTarget "MTPhotoPicker" */;
+			buildConfigurationList = 044F72E030DC8EB5A5D12942321C7E61 /* Build configuration list for PBXNativeTarget "Pods-MTPhotoPicker_Tests" */;
 			buildPhases = (
-				C1E62E262A2CFAF903EC446EB7398D1C /* Sources */,
-				1FD84B95A4A95B0FF570F7E797E75193 /* Frameworks */,
-				2D4C3B9651BBF41E6551443069C86BFC /* Resources */,
-				AE1776EC73E14908E7FFCCCCE4F0CC3D /* Headers */,
+				6337894AFDA9D5D551E58EC02436510A /* Sources */,
+				D9862F23015437BA4D272ECD6F2A1203 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9A0BD45732095BCB311C382FA09313CD /* PBXTargetDependency */,
-			);
-			name = MTPhotoPicker;
-			productName = MTPhotoPicker;
-			productReference = AACDBE492A8FAA0A81619FC2B7478495 /* MTPhotoPicker.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D4F845506EBB745E49982C88675DDE65 /* Pods-MTPhotoPicker_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D092470B117AB76B58F877511FFABD19 /* Build configuration list for PBXNativeTarget "Pods-MTPhotoPicker_Example" */;
-			buildPhases = (
-				A17D7AC27D44C20C8180A870E5FC0CF7 /* Sources */,
-				837E1C30D84C4506843F233974068C21 /* Frameworks */,
-				03F2310A48547D67DF52EF90B60124E7 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				613919B94FE67A79866E68A9A771459D /* PBXTargetDependency */,
-			);
-			name = "Pods-MTPhotoPicker_Example";
-			productName = "Pods-MTPhotoPicker_Example";
-			productReference = BB97D9DBB49909BE943B9D938BBC7A00 /* Pods_MTPhotoPicker_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E05D9E829BA9F50D0C863085599EB13F /* Pods-MTPhotoPicker_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0134B561BF32FC53E47820B0F4C62AE5 /* Build configuration list for PBXNativeTarget "Pods-MTPhotoPicker_Tests" */;
-			buildPhases = (
-				A40A808A2A6AF06C9B857ECEA076A76D /* Sources */,
-				59929A907651BAA94B76563D530354E3 /* Frameworks */,
-				95DEAE0FCDD4B5090B9E6B6F07BD96A4 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				91976DE41F88D1ED05824EBC3A0909CF /* PBXTargetDependency */,
+				9E3A33A0E957E2F5A5B6B166C1D50701 /* PBXTargetDependency */,
 			);
 			name = "Pods-MTPhotoPicker_Tests";
 			productName = "Pods-MTPhotoPicker_Tests";
-			productReference = C8DB245ED612A52EBBAC0DBCC5E4EC44 /* Pods_MTPhotoPicker_Tests.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = D525425F4281E206FDC4F5E8CD77738E /* libPods-MTPhotoPicker_Tests.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -371,24 +371,16 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8EF953A9259CB1882EDFBA16CC51C078 /* MTPhotoPicker */,
-				25E53134AB46E0E73FDBE92C0BF49E30 /* MTPhotoPicker-MTPhotoPicker */,
-				D4F845506EBB745E49982C88675DDE65 /* Pods-MTPhotoPicker_Example */,
-				E05D9E829BA9F50D0C863085599EB13F /* Pods-MTPhotoPicker_Tests */,
+				0B63C18E6A85D20C89A76EEF4F31807D /* MTPhotoPicker */,
+				5A3080D60D59B03A0E9294AF9A45449E /* MTPhotoPicker-MTPhotoPicker */,
+				1BCBC2B98EB655F47B1F7403DE8C21D1 /* Pods-MTPhotoPicker_Example */,
+				BB02B5F0E6FF65B685C40DDB2002726C /* Pods-MTPhotoPicker_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2D4C3B9651BBF41E6551443069C86BFC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A785B3D97767691F10685E04B54A2D93 /* MTPhotoPicker.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74C83E8459A4F119342435BD25F5366D /* Resources */ = {
+		B0C7F5511C0103EA697EBE272A314BE5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,58 +390,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		85D4F21E5AD3010FB279A8DD0881ABB2 /* Sources */ = {
+		0512B6BA6E489CE42A2357A7753A988C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C627531E1D2912694AFEC262086B83BB /* MTAttachCollectionCell.m in Sources */,
+				2BE895977058E80D5F822013126FB86E /* MTCheckmarkView.m in Sources */,
+				8A383C3AECBB7475DB45984C62C8A83A /* MTPhotoPicker-dummy.m in Sources */,
+				19BF35A15C0B353D9E509CB87AEDC199 /* MTPhotoPicker.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E18F91D3EAFDD8BE26941666015B090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A17D7AC27D44C20C8180A870E5FC0CF7 /* Sources */ = {
+		5AEEF7E5E552BE53309269A27D6A8347 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD2C9F1923A465FAD58329D66C390D7D /* Pods-MTPhotoPicker_Example-dummy.m in Sources */,
+				EECBC3914364D980957325FCADD1D365 /* Pods-MTPhotoPicker_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A40A808A2A6AF06C9B857ECEA076A76D /* Sources */ = {
+		6337894AFDA9D5D551E58EC02436510A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				192DEBC3B9526CFCCC75765E4DD30B41 /* Pods-MTPhotoPicker_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1E62E262A2CFAF903EC446EB7398D1C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A9801111447274E90D97BBF5AFBEA4C /* MTPhotoPicker-dummy.m in Sources */,
-				C306ADD4E64910F6CD03FC3ACF45E10F /* ReplaceMe.m in Sources */,
+				25B120010D26E9C3FAC304C58D4E818A /* Pods-MTPhotoPicker_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		613919B94FE67A79866E68A9A771459D /* PBXTargetDependency */ = {
+		9E3A33A0E957E2F5A5B6B166C1D50701 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MTPhotoPicker;
-			target = 8EF953A9259CB1882EDFBA16CC51C078 /* MTPhotoPicker */;
-			targetProxy = 7562E8EC0A9AA09DCADBC6CA16911AE5 /* PBXContainerItemProxy */;
+			target = 0B63C18E6A85D20C89A76EEF4F31807D /* MTPhotoPicker */;
+			targetProxy = 549FA58C639DDBEBBF7B27865603F339 /* PBXContainerItemProxy */;
 		};
-		91976DE41F88D1ED05824EBC3A0909CF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MTPhotoPicker;
-			target = 8EF953A9259CB1882EDFBA16CC51C078 /* MTPhotoPicker */;
-			targetProxy = D2B419C8562BE59B6EACE931AED4C4B5 /* PBXContainerItemProxy */;
-		};
-		9A0BD45732095BCB311C382FA09313CD /* PBXTargetDependency */ = {
+		A0FD7C9041997022A6E9AF28E332C150 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "MTPhotoPicker-MTPhotoPicker";
-			target = 25E53134AB46E0E73FDBE92C0BF49E30 /* MTPhotoPicker-MTPhotoPicker */;
-			targetProxy = 9CE682CC5A55E149EF64D1A21E706B67 /* PBXContainerItemProxy */;
+			target = 5A3080D60D59B03A0E9294AF9A45449E /* MTPhotoPicker-MTPhotoPicker */;
+			targetProxy = C541FC4FE73793C5F51EE098A00EC349 /* PBXContainerItemProxy */;
+		};
+		BC7F1AA944931BB95079190E4B47361C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MTPhotoPicker;
+			target = 0B63C18E6A85D20C89A76EEF4F31807D /* MTPhotoPicker */;
+			targetProxy = 609AB5D5B46F672CDD72D08F28E0F8B4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -488,9 +482,25 @@
 			};
 			name = Release;
 		};
-		0A73F68378C5C65269757884485A8DB8 /* Debug */ = {
+		0503B11B8EF9F57471E1829167EB4010 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E0289A337379E580A54DFDA6EC7BDDF /* MTPhotoPicker-Private.xcconfig */;
+			baseConfigurationReference = 94ADBCF81FF76745477A6F83C73E1551 /* Pods-MTPhotoPicker_Tests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		09BF17B80C4AAE5AECF2015E8CD2AD8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1322CD5002E7F44EE610B91D6BBB6238 /* MTPhotoPicker-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				PRODUCT_NAME = MTPhotoPicker;
@@ -539,65 +549,25 @@
 			};
 			name = Debug;
 		};
-		13BA33D681A371641E2D82565DE3B504 /* Debug */ = {
+		4395A00B624FA954AABEDECBAECB4656 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E0289A337379E580A54DFDA6EC7BDDF /* MTPhotoPicker-Private.xcconfig */;
+			baseConfigurationReference = 1322CD5002E7F44EE610B91D6BBB6238 /* MTPhotoPicker-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1.0;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MTPhotoPicker/MTPhotoPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MTPhotoPicker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MTPhotoPicker/MTPhotoPicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MTPhotoPicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		40A8906B1074E4CA975E6934C6594793 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EA0653939B4FACA28A0A9789916D787 /* Pods-MTPhotoPicker_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MTPhotoPicker_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-MTPhotoPicker_Tests/Pods-MTPhotoPicker_Tests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_MTPhotoPicker_Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		543F4F0C052F40EE30BAAAD79CC7A4E3 /* Release */ = {
+		6CBEE9BBF388AF0C09C3E2C87A5F5529 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E0289A337379E580A54DFDA6EC7BDDF /* MTPhotoPicker-Private.xcconfig */;
+			baseConfigurationReference = 1322CD5002E7F44EE610B91D6BBB6238 /* MTPhotoPicker-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				PRODUCT_NAME = MTPhotoPicker;
@@ -607,128 +577,78 @@
 			};
 			name = Release;
 		};
-		75FE43AD0AA2EE909FE58B47FBD17AEF /* Debug */ = {
+		7B3B268641D610BAE8686808F91EF461 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A803415DD5BE0AA69FE6823014777F31 /* Pods-MTPhotoPicker_Example.debug.xcconfig */;
+			baseConfigurationReference = 312EFC667FBCEFC9C96EE0C06F0338D9 /* Pods-MTPhotoPicker_Tests.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MTPhotoPicker_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-MTPhotoPicker_Example/Pods-MTPhotoPicker_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_MTPhotoPicker_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7DC12D2EFC0B63924ED5A517CCA794D2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB10501933F6BF94FA34C3AF5AF025E7 /* Pods-MTPhotoPicker_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MTPhotoPicker_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-MTPhotoPicker_Example/Pods-MTPhotoPicker_Example.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_MTPhotoPicker_Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		92E4F6E66FE423F8E6795C0173C5F8D8 /* Debug */ = {
+		82EF615459BBA62D1BCCD6C9412E3C0D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EE05F33A8942D2FE363A6EA1DB278D8 /* Pods-MTPhotoPicker_Tests.debug.xcconfig */;
+			baseConfigurationReference = 1322CD5002E7F44EE610B91D6BBB6238 /* MTPhotoPicker-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MTPhotoPicker_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				GCC_PREFIX_HEADER = "Target Support Files/MTPhotoPicker/MTPhotoPicker-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-MTPhotoPicker_Tests/Pods-MTPhotoPicker_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DDA8F09C4FA6B67C8884BDCAA5C5644A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0038681A1F9B88DB1362C844FDD2D554 /* Pods-MTPhotoPicker_Example.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_MTPhotoPicker_Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		DD00FE10F41D604E1F842A5DE003FEF3 /* Release */ = {
+		DF2411E96DD2576488DBBCD101125991 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E0289A337379E580A54DFDA6EC7BDDF /* MTPhotoPicker-Private.xcconfig */;
+			baseConfigurationReference = 38BE3E1C3BCC39518C5611726E2A8B5E /* Pods-MTPhotoPicker_Example.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1.0;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MTPhotoPicker/MTPhotoPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MTPhotoPicker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MTPhotoPicker/MTPhotoPicker.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MTPhotoPicker;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0134B561BF32FC53E47820B0F4C62AE5 /* Build configuration list for PBXNativeTarget "Pods-MTPhotoPicker_Tests" */ = {
+		044F72E030DC8EB5A5D12942321C7E61 /* Build configuration list for PBXNativeTarget "Pods-MTPhotoPicker_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92E4F6E66FE423F8E6795C0173C5F8D8 /* Debug */,
-				40A8906B1074E4CA975E6934C6594793 /* Release */,
+				0503B11B8EF9F57471E1829167EB4010 /* Debug */,
+				7B3B268641D610BAE8686808F91EF461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -742,29 +662,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32BC8CA082FC4207BE910EFBE4E6EC63 /* Build configuration list for PBXNativeTarget "MTPhotoPicker-MTPhotoPicker" */ = {
+		750429B07BDA3B906FC0BFC3E9BED374 /* Build configuration list for PBXNativeTarget "Pods-MTPhotoPicker_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0A73F68378C5C65269757884485A8DB8 /* Debug */,
-				543F4F0C052F40EE30BAAAD79CC7A4E3 /* Release */,
+				DDA8F09C4FA6B67C8884BDCAA5C5644A /* Debug */,
+				DF2411E96DD2576488DBBCD101125991 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6EE5F638CA4EE81C5DFC0BC790EDB81F /* Build configuration list for PBXNativeTarget "MTPhotoPicker" */ = {
+		79C3981F8DAF4224191C62CCB090AF11 /* Build configuration list for PBXNativeTarget "MTPhotoPicker-MTPhotoPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13BA33D681A371641E2D82565DE3B504 /* Debug */,
-				DD00FE10F41D604E1F842A5DE003FEF3 /* Release */,
+				09BF17B80C4AAE5AECF2015E8CD2AD8A /* Debug */,
+				6CBEE9BBF388AF0C09C3E2C87A5F5529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D092470B117AB76B58F877511FFABD19 /* Build configuration list for PBXNativeTarget "Pods-MTPhotoPicker_Example" */ = {
+		88C91BBAC7195F20B77DC3CFB62F87D4 /* Build configuration list for PBXNativeTarget "MTPhotoPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75FE43AD0AA2EE909FE58B47FBD17AEF /* Debug */,
-				7DC12D2EFC0B63924ED5A517CCA794D2 /* Release */,
+				82EF615459BBA62D1BCCD6C9412E3C0D /* Debug */,
+				4395A00B624FA954AABEDECBAECB4656 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

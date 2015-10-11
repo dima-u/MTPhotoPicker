@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32F5449F1BCB0B7600D80116 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F5449D1BCB0B7600D80116 /* PhotoCell.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -21,8 +22,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		B0E7A4850218A6E2C829EF28 /* Pods_MTPhotoPicker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EBD6D54F56C1251FDC16B7 /* Pods_MTPhotoPicker_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F10D294F74731E964DFAB69B /* Pods_MTPhotoPicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16191A801656934033305F27 /* Pods_MTPhotoPicker_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B2A1B155ECD0510519DE44E1 /* libPods-MTPhotoPicker_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAD51ADE4CF74AD6E1DD6A6 /* libPods-MTPhotoPicker_Example.a */; };
+		BEA7C4DAB52FA117F7A62CB5 /* libPods-MTPhotoPicker_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B9B21223C9E07285ED8402 /* libPods-MTPhotoPicker_Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		16191A801656934033305F27 /* Pods_MTPhotoPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTPhotoPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4608770B520C27FBA4EF1D /* Pods-MTPhotoPicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTPhotoPicker_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTPhotoPicker_Tests/Pods-MTPhotoPicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		32F5449D1BCB0B7600D80116 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		32F5449E1BCB0B7600D80116 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
 		5D1A1DC6131E67D9D6DC8435 /* Pods-MTPhotoPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTPhotoPicker_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTPhotoPicker_Example/Pods-MTPhotoPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* MTPhotoPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MTPhotoPicker.app; path = MTPhotoPicker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58A195388D20070C39A /* MTPhotoPicker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTPhotoPicker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -52,18 +54,19 @@
 		6003F5A5195388D20070C39A /* MTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* MTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = MTPhotoPicker_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* MTPhotoPicker_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTPhotoPicker_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		684E45E75AC20E0BB4F4A3A4 /* Pods-MTPhotoPicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTPhotoPicker_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTPhotoPicker_Tests/Pods-MTPhotoPicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		7BAD51ADE4CF74AD6E1DD6A6 /* libPods-MTPhotoPicker_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTPhotoPicker_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A3B9B21223C9E07285ED8402 /* libPods-MTPhotoPicker_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTPhotoPicker_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D81135619DAF479708B919 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B8B41B3E3538150D1A147C5C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D93DE97C8D58E1AEE64E10AD /* MTPhotoPicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MTPhotoPicker.podspec; path = ../MTPhotoPicker.podspec; sourceTree = "<group>"; };
-		D9EBD6D54F56C1251FDC16B7 /* Pods_MTPhotoPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTPhotoPicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F442795A4794B7D1F0F57AEB /* Pods-MTPhotoPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTPhotoPicker_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTPhotoPicker_Example/Pods-MTPhotoPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +78,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				F10D294F74731E964DFAB69B /* Pods_MTPhotoPicker_Example.framework in Frameworks */,
+				B2A1B155ECD0510519DE44E1 /* libPods-MTPhotoPicker_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +89,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				B0E7A4850218A6E2C829EF28 /* Pods_MTPhotoPicker_Tests.framework in Frameworks */,
+				BEA7C4DAB52FA117F7A62CB5 /* libPods-MTPhotoPicker_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,8 +122,8 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* MTPhotoPicker.app */,
-				6003F5AE195388D20070C39A /* Tests.xctest */,
+				6003F58A195388D20070C39A /* MTPhotoPicker_Example.app */,
+				6003F5AE195388D20070C39A /* MTPhotoPicker_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,8 +135,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				16191A801656934033305F27 /* Pods_MTPhotoPicker_Example.framework */,
-				D9EBD6D54F56C1251FDC16B7 /* Pods_MTPhotoPicker_Tests.framework */,
+				7BAD51ADE4CF74AD6E1DD6A6 /* libPods-MTPhotoPicker_Example.a */,
+				A3B9B21223C9E07285ED8402 /* libPods-MTPhotoPicker_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -141,6 +144,8 @@
 		6003F593195388D20070C39A /* Example for MTPhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
+				32F5449D1BCB0B7600D80116 /* PhotoCell.m */,
+				32F5449E1BCB0B7600D80116 /* PhotoCell.h */,
 				6003F59C195388D20070C39A /* MTAppDelegate.h */,
 				6003F59D195388D20070C39A /* MTAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -204,7 +209,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				A69436E76859A0264E0732C0 /* Embed Pods Frameworks */,
 				2710E1DEDBB141BB80CA10F1 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -213,7 +217,7 @@
 			);
 			name = MTPhotoPicker_Example;
 			productName = MTPhotoPicker;
-			productReference = 6003F58A195388D20070C39A /* MTPhotoPicker.app */;
+			productReference = 6003F58A195388D20070C39A /* MTPhotoPicker_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* MTPhotoPicker_Tests */ = {
@@ -224,7 +228,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				63D8DF7734585B29D102868B /* Embed Pods Frameworks */,
 				1A6B021FDA63C18F05CF87E8 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -234,7 +237,7 @@
 			);
 			name = MTPhotoPicker_Tests;
 			productName = MTPhotoPickerTests;
-			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
+			productReference = 6003F5AE195388D20070C39A /* MTPhotoPicker_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -323,36 +326,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTPhotoPicker_Example/Pods-MTPhotoPicker_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		63D8DF7734585B29D102868B /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTPhotoPicker_Tests/Pods-MTPhotoPicker_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A69436E76859A0264E0732C0 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTPhotoPicker_Example/Pods-MTPhotoPicker_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B3ABD968A6CFB7BB38D8163B /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32F5449F1BCB0B7600D80116 /* PhotoCell.m in Sources */,
 				6003F59E195388D20070C39A /* MTAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MTViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

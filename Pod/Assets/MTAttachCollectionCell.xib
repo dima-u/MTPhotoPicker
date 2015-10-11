@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MTAttachCollectionCell" id="lWd-fI-IJ0" userLabel="MTAttachCollectionCell" customClass="MTAttachCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CX1-vw-5Zy" userLabel="View - content">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5E5-ba-p9x" userLabel="Image View - previewImage">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykL-MI-y0g" userLabel="Button - select">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectButtonPressed:" destination="lWd-fI-IJ0" eventType="touchUpInside" id="xzN-yF-RWF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ykL-MI-y0g" secondAttribute="trailing" id="CC6-Xu-xPE"/>
+                            <constraint firstItem="5E5-ba-p9x" firstAttribute="leading" secondItem="CX1-vw-5Zy" secondAttribute="leading" id="CaJ-Kt-qhq"/>
+                            <constraint firstAttribute="bottom" secondItem="ykL-MI-y0g" secondAttribute="bottom" id="H3F-lC-Xng"/>
+                            <constraint firstAttribute="bottom" secondItem="5E5-ba-p9x" secondAttribute="bottom" id="Lkz-Qc-IH3"/>
+                            <constraint firstItem="ykL-MI-y0g" firstAttribute="leading" secondItem="CX1-vw-5Zy" secondAttribute="leading" id="MD5-va-CbR"/>
+                            <constraint firstAttribute="trailing" secondItem="5E5-ba-p9x" secondAttribute="trailing" id="Msy-WJ-VOG"/>
+                            <constraint firstItem="ykL-MI-y0g" firstAttribute="top" secondItem="CX1-vw-5Zy" secondAttribute="top" id="NIa-Vc-s38"/>
+                            <constraint firstItem="5E5-ba-p9x" firstAttribute="top" secondItem="CX1-vw-5Zy" secondAttribute="top" id="RNl-Os-oHT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CX1-vw-5Zy" firstAttribute="top" secondItem="lWd-fI-IJ0" secondAttribute="top" id="Swt-mF-KaJ"/>
+                <constraint firstItem="CX1-vw-5Zy" firstAttribute="leading" secondItem="lWd-fI-IJ0" secondAttribute="leading" id="VaK-QK-B8c"/>
+                <constraint firstAttribute="bottom" secondItem="CX1-vw-5Zy" secondAttribute="bottom" id="l4i-wS-IQg"/>
+                <constraint firstAttribute="trailing" secondItem="CX1-vw-5Zy" secondAttribute="trailing" id="vL8-5q-qQe"/>
+            </constraints>
+            <size key="customSize" width="130" height="148"/>
+            <connections>
+                <outlet property="previewImageView" destination="5E5-ba-p9x" id="6VP-LR-Dx0"/>
+                <outlet property="selectButton" destination="ykL-MI-y0g" id="sFS-xm-8KQ"/>
+            </connections>
+            <point key="canvasLocation" x="256" y="292"/>
+        </collectionViewCell>
+    </objects>
+</document>

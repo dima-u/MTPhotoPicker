@@ -30,7 +30,8 @@ PhotoPicker allows you to integrate imessage style photo selection view in a sev
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = ['Pod/Classes/**/*']
+  s.resources = ['Pod/Assets/*.xib']
   s.resource_bundles = {
     'MTPhotoPicker' => ['Pod/Assets/*.png']
   }

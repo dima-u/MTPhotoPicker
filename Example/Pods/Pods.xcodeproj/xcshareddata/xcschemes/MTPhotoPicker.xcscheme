@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1CDE9389B4901E9868B5A03"
-               BuildableName = "MTPhotoPicker.framework"
+               BlueprintIdentifier = "4EF240E17E7FDC39EE41E545"
+               BuildableName = "libMTPhotoPicker.a"
                BlueprintName = "MTPhotoPicker"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

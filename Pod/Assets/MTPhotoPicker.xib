@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MTPhotoPicker">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.19999999999999968" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wnz-It-kMD" userLabel="background">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PL4-sf-wUW" userLabel="hideViewButton">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onCancelButtonTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ksh-rj-aLF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="PL4-sf-wUW" secondAttribute="trailing" id="Gee-gu-Uq8"/>
+                        <constraint firstItem="PL4-sf-wUW" firstAttribute="leading" secondItem="wnz-It-kMD" secondAttribute="leading" id="alS-w7-RPQ"/>
+                        <constraint firstItem="PL4-sf-wUW" firstAttribute="top" secondItem="wnz-It-kMD" secondAttribute="top" id="xzr-FY-LP9"/>
+                        <constraint firstAttribute="bottom" secondItem="PL4-sf-wUW" secondAttribute="bottom" id="zVk-PC-8QY"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hm1-cq-Kmd">
+                    <rect key="frame" x="0.0" y="280" width="600" height="320"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ocS-Gj-ACp" userLabel="photos">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="168"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ATp-6i-Zh3">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="iN0-l3-epB" id="FG0-s1-daO"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="olV-4Q-GW1"/>
+                            </connections>
+                        </collectionView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8l0-0W-HVH">
+                            <rect key="frame" x="0.0" y="270" width="600" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="mJp-jj-VfB"/>
+                            </constraints>
+                            <state key="normal" title="Cancel">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onCancelButtonTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="8j4-XT-vfY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1X-CI-y1D" userLabel="Add Phoot">
+                            <rect key="frame" x="0.0" y="168" width="600" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="C9L-71-uAU"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="U9K-Xm-Mcb"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="byW-HZ-Fmu"/>
+                            </constraints>
+                            <state key="normal" title="Add Photo">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="U9K-Xm-Mcb"/>
+                                    <exclude reference="byW-HZ-Fmu"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="onFirstButtonTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="1eL-la-pkr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loS-g4-98I" userLabel="Add video">
+                            <rect key="frame" x="0.0" y="219" width="600" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="N54-nG-jvF"/>
+                                <constraint firstAttribute="height" constant="50" id="plY-33-3CM"/>
+                            </constraints>
+                            <state key="normal" title="Add Video">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="N54-nG-jvF"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="onSecondButtonTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="uR2-0M-SVz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="loS-g4-98I" firstAttribute="top" secondItem="b1X-CI-y1D" secondAttribute="bottom" constant="1" id="0CW-AC-c4t"/>
+                        <constraint firstAttribute="trailing" secondItem="8l0-0W-HVH" secondAttribute="trailing" id="2hR-Js-SHG"/>
+                        <constraint firstItem="loS-g4-98I" firstAttribute="top" secondItem="b1X-CI-y1D" secondAttribute="bottom" constant="1" id="74V-F2-EjG"/>
+                        <constraint firstAttribute="trailing" secondItem="ocS-Gj-ACp" secondAttribute="trailing" id="9gF-4c-fYd"/>
+                        <constraint firstAttribute="height" constant="320" id="Hv9-8K-WqU"/>
+                        <constraint firstItem="ocS-Gj-ACp" firstAttribute="leading" secondItem="Hm1-cq-Kmd" secondAttribute="leading" id="MGm-Ek-it4"/>
+                        <constraint firstAttribute="trailing" secondItem="loS-g4-98I" secondAttribute="trailing" id="Pdj-Mq-zWP"/>
+                        <constraint firstItem="loS-g4-98I" firstAttribute="leading" secondItem="Hm1-cq-Kmd" secondAttribute="leading" id="WRO-fB-Lsi"/>
+                        <constraint firstAttribute="bottom" secondItem="8l0-0W-HVH" secondAttribute="bottom" id="ZQw-Xn-ePJ"/>
+                        <constraint firstItem="b1X-CI-y1D" firstAttribute="top" secondItem="ocS-Gj-ACp" secondAttribute="bottom" id="aPd-mt-Nar"/>
+                        <constraint firstItem="8l0-0W-HVH" firstAttribute="leading" secondItem="Hm1-cq-Kmd" secondAttribute="leading" id="auN-pT-wvP"/>
+                        <constraint firstAttribute="trailing" secondItem="b1X-CI-y1D" secondAttribute="trailing" id="eZb-Kw-96e"/>
+                        <constraint firstItem="b1X-CI-y1D" firstAttribute="leading" secondItem="Hm1-cq-Kmd" secondAttribute="leading" id="jxf-on-L73"/>
+                        <constraint firstItem="8l0-0W-HVH" firstAttribute="top" secondItem="loS-g4-98I" secondAttribute="bottom" constant="1" id="lG8-Kg-jYJ"/>
+                        <constraint firstAttribute="trailing" secondItem="ocS-Gj-ACp" secondAttribute="trailing" id="pTm-mQ-Hh0"/>
+                        <constraint firstItem="ocS-Gj-ACp" firstAttribute="leading" secondItem="Hm1-cq-Kmd" secondAttribute="leading" id="uAE-b8-3ph"/>
+                        <constraint firstItem="ocS-Gj-ACp" firstAttribute="top" secondItem="Hm1-cq-Kmd" secondAttribute="top" id="ywb-Dp-a4d"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="9gF-4c-fYd"/>
+                            <exclude reference="uAE-b8-3ph"/>
+                            <exclude reference="74V-F2-EjG"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Hm1-cq-Kmd" secondAttribute="bottom" id="26M-vC-8zC"/>
+                <constraint firstAttribute="bottom" secondItem="wnz-It-kMD" secondAttribute="bottom" id="3cT-mp-YeH"/>
+                <constraint firstItem="wnz-It-kMD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LLE-om-XIo"/>
+                <constraint firstAttribute="trailing" secondItem="wnz-It-kMD" secondAttribute="trailing" id="OMH-F5-ctR"/>
+                <constraint firstItem="Hm1-cq-Kmd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Q6F-Jv-MeZ"/>
+                <constraint firstItem="wnz-It-kMD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="diG-6u-8QI"/>
+                <constraint firstAttribute="trailing" secondItem="Hm1-cq-Kmd" secondAttribute="trailing" id="dpj-ec-aIK"/>
+            </constraints>
+            <connections>
+                <outlet property="attachView" destination="Hm1-cq-Kmd" id="YYu-DV-K3j"/>
+                <outlet property="attachViewHeightConstraint" destination="Hv9-8K-WqU" id="BoX-4I-xzh"/>
+                <outlet property="backgroundView" destination="wnz-It-kMD" id="yQs-Rw-O6A"/>
+                <outlet property="cancelButton" destination="8l0-0W-HVH" id="8Xn-dV-Pho"/>
+                <outlet property="collectionAttaches" destination="ocS-Gj-ACp" id="9gd-NR-8Wz"/>
+                <outlet property="firstButton" destination="b1X-CI-y1D" id="Mmr-g6-JDQ"/>
+                <outlet property="secondButton" destination="loS-g4-98I" id="o25-Nf-XLf"/>
+                <outlet property="viewBottomOffsetConstraint" destination="26M-vC-8zC" id="R1l-Ar-vgT"/>
+            </connections>
+            <point key="canvasLocation" x="635" y="345"/>
+        </view>
+    </objects>
+</document>
