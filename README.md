@@ -5,6 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/MTPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/MTPhotoPicker)
 [![Platform](https://img.shields.io/cocoapods/p/MTPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/MTPhotoPicker)
 
+MTPhotoPicker is an imessage style photo picker for your application with customization and rotation support
+
+
 ## Features
 
  - automatically parse photolibrary
