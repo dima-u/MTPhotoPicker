@@ -72,14 +72,10 @@
 #pragma mark - MTPhotoPickerDelegate
 -(BOOL)photoPickerShouldDismissWithAssets:(NSArray *)assets{
     return YES;
-    
 }
 
 -(void)photoPickerAssetsSelected:(NSArray *)assets{
-    
-    _photos = assets;
-    
-    [table reloadData];
+    //use ALAsset array
 }
 
 
@@ -90,9 +86,7 @@
 }
 
 -(void)photoPickerButtonItemClicked:(NSInteger)itemInedx{
-    
     //handle custom  buttons click
-    
 }
 
 
