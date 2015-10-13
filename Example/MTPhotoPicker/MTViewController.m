@@ -22,29 +22,33 @@
 
 }
 
-@property(nonatomic,strong) MTPhotoPicker * attachView;
+@property(nonatomic,strong) MTPhotoPicker * pickerView;
 @end
 
 @implementation MTViewController
 
--(MTPhotoPicker *)attachView{
-    if(!_attachView){
+-(MTPhotoPicker *)pickerView{
+    if(!_pickerView){
+        
+        _pickerView = [MTPhotoPicker pickerWithTitle:@"Choose Photo" alternateTitle:@"Attach photos (%ld)" otherTitles:@[@"Open gallery",@"Other title"] cancelTitle:@"Cancel"];
         
         
+        [_pickerView setDelegate:self];
     
-   //     NSBundle *bundle = [NSBundle bundleWithURL:[
-   //                                                 [NSBundle mainBundle] URLForResource:@"MTPhotoPicker" withExtension:@"bundle"]];
-        
-        _attachView =  [[[NSBundle mainBundle] loadNibNamed:@"MTPhotoPicker" owner:self options:nil] objectAtIndex:0];
-        [_attachView setDelegate:self];
     }
-    return _attachView;
+    return _pickerView;
 }
 
 
 -(IBAction)choosePhotos:(id)sender{
     
-    [self.attachView showInView:self.view];
+    
+    [self.pickerView loadAssets:^{
+        
+      [self.pickerView showInView:self.view];
+    
+    }];
+    
     
 }
 
@@ -67,7 +71,6 @@
 
 #pragma mark - MTPhotoPickerDelegate
 -(BOOL)photoPickerShouldDismissWithAssets:(NSArray *)assets{
-    
     return YES;
     
 }
@@ -82,19 +85,15 @@
 
 -(void)photoPickerDidDismiss{
 
-    _attachView = nil;
+    _pickerView = nil;
 
 }
 
-- (void)photoPickerAddPhoto{
-    [[[UIAlertView alloc] initWithTitle:@"Choose photo/video" message:@"launch photo viewer" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+-(void)photoPickerButtonItemClicked:(NSInteger)itemInedx{
+    
+    //handle custom  buttons click
     
 }
-
-- (void)photoPickerAddVideo{
-    [[[UIAlertView alloc] initWithTitle:@"Capture photo/video" message:@"launch photo camera" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-}
-
 
 
 #pragma mark - UITableViewDelegate

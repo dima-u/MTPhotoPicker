@@ -16,21 +16,23 @@
 
 @interface MTPhotoPicker()<MTAttachCollectionCellDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate>
 
-
+-(void) setupWithTitle:(NSString *)title alternateTitle:(NSString *)atitle otherTitles:(NSArray *)titles cancelTitle:(NSString *)cTitle;
 
 -(void) _clipToView:(UIView *)targetView;
 
 - (void) showAnimated;
 
-- (void) loadAttaches;
-
 -(void) _addAsset:(ALAsset *) asset;
+
+@property (nonatomic, weak) IBOutlet UIView * otherButtonsContainer;
 
 @property (nonatomic, weak) IBOutlet UIView * backgroundView;
 @property (nonatomic, weak) IBOutlet UIView * attachView;
 
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *viewBottomOffsetConstraint;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *attachViewHeightConstraint;
+
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *otherButtonsHeight;
 
 @property (nonatomic, weak) IBOutlet UIButton *firstButton;
 @property (nonatomic, weak) IBOutlet UIButton *secondButton;
@@ -58,8 +60,21 @@
     __weak id <MTPhotoPickerDelegate> _delegate;
     
     
+    NSArray * _buttonItems;
+    
+    NSString * _selectTitle;
+    
+    NSString * _alternateSelectTitle;
+    
+    NSString * _cancelTitle;
+    
+    BOOL _loadingAssets;
+    
+    dispatch_block_t _preloadCompletionBlock;
+    
+    BOOL _assetsLoaded;
+    
 }
-
 
 
 + (ALAssetsLibrary *)defaultAssetsLibrary {
@@ -71,12 +86,39 @@
     return library;
 }
 
+
++(instancetype)pickerWithTitle:(NSString *)title alternateTitle:(NSString *)atitle otherTitles:(NSArray *)titles cancelTitle:(NSString *)cTitle{
+    
+    MTPhotoPicker * _picker = [[[NSBundle mainBundle] loadNibNamed:@"MTPhotoPicker" owner:self options:nil] objectAtIndex:0];
+    [_picker setupWithTitle:title alternateTitle:atitle otherTitles:titles cancelTitle:cTitle];
+    return _picker;
+    
+}
+
 -(void) _addAsset:(ALAsset *) asset{
     [assets addObject:asset];
 }
 
 - (void) setDelegate:(id <MTPhotoPickerDelegate>) delegate{
     _delegate = delegate;
+}
+
+-(void) setupWithTitle:(NSString *)title alternateTitle:(NSString *)atitle otherTitles:(NSArray *)titles cancelTitle:(NSString *)cTitle{
+    
+    _selectTitle = title;
+    
+    _alternateSelectTitle = atitle;
+    
+    _buttonItems = titles;
+    
+    _cancelTitle = cTitle;
+    
+    [self p_setupUI];
+    
+    
+    
+    
+    
 }
 
 - (void)awakeFromNib
@@ -89,8 +131,6 @@
     
     [self.collectionAttaches registerNib:[UINib nibWithNibName:@"MTAttachCollectionCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"MTAttachCollectionCell"];
     
-    [self p_setupUI];
-    
     self.collectionAttaches.dataSource = self;
     
     self.collectionAttaches.delegate = self;
@@ -101,20 +141,50 @@
 
     self.hidden = YES;
     
-    if(IS_IPHONE_4 || IS_IPHONE_5){
-        self.attachViewHeightConstraint.constant = 280.f;
-    }
-    
-    
-    self.frame = CGRectZero;
-    self.translatesAutoresizingMaskIntoConstraints = NO;
-    
+
 }
 
 
-#pragma mark - public methods
-- (void)loadAttaches
+#pragma mark - KVO view
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
+    
+    
+    if(!self.hidden){
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSArray * cells = [self.collectionAttaches visibleCells];
+            
+            for(MTAttachCollectionCell * _cell in cells){
+                [_cell redrawCheckMark];
+            }
+        });
+
+        
+    }
+    
+    
+    
+}
+
+#pragma mark - public methods
+
+
+- (void) loadAssets:(dispatch_block_t) completion
+{
+    
+
+    if(_assetsLoaded){
+        [self.collectionAttaches reloadData];
+        return;
+    }
+    
+    if(_loadingAssets) return;
+    
+    if(completion) _preloadCompletionBlock = completion;
+    
+    _loadingAssets = YES;
+    
     assets = [NSMutableArray new];
     
     markedAssets = [NSMutableSet new];
@@ -163,10 +233,10 @@
                                        *innerStop = YES;
                                    }
                                    
-                                   dispatch_async(dispatch_get_main_queue(), ^{
-                                       if(table)
-                                           [table reloadData];
-                                   });
+                             //      dispatch_async(dispatch_get_main_queue(), ^{
+                             //          if(table)
+                             //              [table reloadData];
+                             //      });
                                    
                                    count++;
                                }
@@ -174,11 +244,30 @@
                            
     
                            dispatch_async(dispatch_get_main_queue(), ^{
-                               if(table)
-                                   [table reloadData];
+                               
+                               if(_preloadCompletionBlock){
+                                   _preloadCompletionBlock();
+                                   _preloadCompletionBlock = nil;
+                               }
+                                _assetsLoaded = YES;
+                               _loadingAssets = NO;
+                               
+                        //       if(table)
+                        //           [table reloadData];
                            });
                            
                        } failureBlock: ^(NSError *error) {
+                           
+                           dispatch_async(dispatch_get_main_queue(), ^{
+                               
+                               if(_preloadCompletionBlock){
+                                   _preloadCompletionBlock();
+                                   _preloadCompletionBlock = nil;
+                               }
+                               _assetsLoaded = YES;
+                               _loadingAssets = NO;
+                               
+                           });
                            
                            NSLog(@"No groups");
                            
@@ -211,11 +300,36 @@
 #pragma mark - private methods
 - (void)p_setupUI
 {
-    [self.firstButton setTitle:kPPickerAddPhotoText forState:UIControlStateNormal];
-    [self.secondButton setTitle:kPPickerAddVideoText forState:UIControlStateNormal];
-    [self.cancelButton setTitle:kPPickerCancelText forState:UIControlStateNormal];
+    [self.firstButton setTitle:_selectTitle forState:UIControlStateNormal];
+    [self.cancelButton setTitle:_cancelTitle forState:UIControlStateNormal];
+    
+    [self _styleButton:self.firstButton];
+    [self _styleButton:self.cancelButton];
     
     
+    self.otherButtonsHeight.constant = [_buttonItems count] > 0 ? [_buttonItems count] * 45.f - 1.f : 0.f;
+    
+    int i=0;
+    for(NSString * title in _buttonItems){
+        [self addButton:title atIndex:i];
+        i++;
+    }
+    
+    if(IS_IPHONE_4 || IS_IPHONE_5){
+        self.attachViewHeightConstraint.constant = 280.f;
+    }
+    
+    
+    self.frame = CGRectZero;
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.layer addObserver:self forKeyPath:@"bounds" options:0 context:NULL];
+    
+    [self setNeedsUpdateConstraints];
+    
+}
+
+-(void) _styleButton:(UIButton *)button{
     
     static UIImage * normalImage;
     static UIImage * selectedImage;
@@ -245,14 +359,8 @@
         
     });
     
-
-    
-    [self.firstButton setBackgroundImage:selectedImage forState:UIControlStateHighlighted];
-    [self.secondButton setBackgroundImage:selectedImage forState:UIControlStateHighlighted];
-    [self.cancelButton setBackgroundImage:selectedImage forState:UIControlStateHighlighted];
-    [self.firstButton setBackgroundImage:normalImage forState:UIControlStateNormal];
-    [self.secondButton setBackgroundImage:normalImage forState:UIControlStateNormal];
-    [self.cancelButton setBackgroundImage:normalImage forState:UIControlStateNormal];
+    [button setBackgroundImage:selectedImage forState:UIControlStateHighlighted];
+    [button setBackgroundImage:normalImage forState:UIControlStateNormal];
 }
 
 
@@ -282,23 +390,10 @@
     }else{
         
         if(_delegate){
-            [_delegate photoPickerAddPhoto];
+            [_delegate photoPickerButtonItemClicked:0];
             [self onCancelButtonTouch:nil];
         }
         
-    }
-    
-}
-
--(IBAction)onSecondButtonTouch:(id)sender{
-    
-
-    if([markedAssets count] > 0) return;
-    
-    
-    if(_delegate){
-        [_delegate photoPickerAddVideo];
-        [self onCancelButtonTouch:nil];
     }
     
 }
@@ -336,7 +431,7 @@
 
 - (void) showInView:(UIView *)view{
     
-    [self loadAttaches];
+    [self loadAssets:NULL];
     
     [view addSubview:self];
     
@@ -347,9 +442,7 @@
 
 - (void) showAnimated{
     
-    [self.firstButton setTitle:kPPickerAddPhotoText forState:UIControlStateNormal];
-    [self.secondButton setTitle:kPPickerAddVideoText forState:UIControlStateNormal];
-    self.secondButton.enabled = YES;
+    [self.firstButton setTitle:_selectTitle forState:UIControlStateNormal];
 
     markedAssets = [NSMutableSet new];
     
@@ -378,13 +471,11 @@
     NSInteger cnt = [markedAssets count];
     
     if(cnt > 0){
-        [self.firstButton setTitle:[NSString stringWithFormat:kPPickerSendPhotosText,(long)cnt] forState:UIControlStateNormal];
-        [self.secondButton setTitle:@"" forState:UIControlStateNormal];
-        self.secondButton.enabled = NO;
+        [self.firstButton setTitle:[NSString stringWithFormat:_alternateSelectTitle,(long)cnt] forState:UIControlStateNormal];
+  //      [self.secondButton setTitle:@"" forState:UIControlStateNormal];
+  //      self.secondButton.enabled = NO;
     }else{
-        [self.firstButton setTitle:kPPickerAddPhotoText forState:UIControlStateNormal];
-        [self.secondButton setTitle:kPPickerAddVideoText forState:UIControlStateNormal];
-        self.secondButton.enabled = YES;
+        [self.firstButton setTitle:_selectTitle forState:UIControlStateNormal];
     }
 }
 
@@ -515,6 +606,72 @@
                                                           attribute:NSLayoutAttributeCenterY
                                                          multiplier:1.0
                                                            constant:0.0]];
+
 }
+
+
+
+-(void) addButton:(NSString *) title atIndex:(NSInteger) bIndex{
+    
+    UIButton * button = [UIButton buttonWithType:UIButtonTypeSystem];
+    
+    [self.otherButtonsContainer addSubview:button];
+    
+    [button setTitle:title forState:UIControlStateNormal];
+
+    [button setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    button.tag = bIndex;
+    
+    [button addTarget:self action:@selector(optionButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self _styleButton:button];
+    
+    
+    
+    [button addConstraint:[NSLayoutConstraint constraintWithItem:button
+                                                        attribute:NSLayoutAttributeHeight
+                                                        relatedBy:NSLayoutRelationEqual
+                                                           toItem:nil
+                                                        attribute:NSLayoutAttributeNotAnAttribute
+                                                       multiplier:1.0f
+                                                         constant:44.f]];
+    
+    
+    [self.otherButtonsContainer addConstraint:[NSLayoutConstraint constraintWithItem:button
+                                                                           attribute:NSLayoutAttributeTop
+                                                                           relatedBy:NSLayoutRelationEqual
+                                                                              toItem:self.otherButtonsContainer
+                                                                           attribute:NSLayoutAttributeTop
+                                                                          multiplier:1.0f
+                                                                            constant:bIndex * 45.f]];
+    
+    [self.otherButtonsContainer addConstraint:[NSLayoutConstraint constraintWithItem:button
+                                                                           attribute:NSLayoutAttributeLeftMargin
+                                                                           relatedBy:NSLayoutRelationEqual
+                                                                              toItem:self.otherButtonsContainer
+                                                                           attribute:NSLayoutAttributeLeft
+                                                                          multiplier:1.0f
+                                                                            constant:0.f]];
+    
+    [self.otherButtonsContainer addConstraint:[NSLayoutConstraint constraintWithItem:button
+                                                                           attribute:NSLayoutAttributeRightMargin
+                                                                           relatedBy:NSLayoutRelationEqual
+                                                                              toItem:self.otherButtonsContainer
+                                                                           attribute:NSLayoutAttributeRight
+                                                                          multiplier:1.0f
+                                                                            constant:0.f]];
+    
+}
+
+
+-(void) optionButtonClicked:(id)sender{
+    
+    UIButton * button = (UIButton *)sender;
+    [_delegate photoPickerButtonItemClicked:(button.tag+1)];
+    [self onCancelButtonTouch:nil];
+    
+}
+
 
 @end

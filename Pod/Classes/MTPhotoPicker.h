@@ -26,6 +26,14 @@
 
 @interface MTPhotoPicker : UIView
 
++(instancetype)pickerWithTitle:(NSString *)title alternateTitle:(NSString *)atitle otherTitles:(NSArray *)titles cancelTitle:(NSString *)cTitle;
+
+/*!
+ * @discussion Will preload photos
+ * @param view An UIView or subclass that will be parent for photo picker
+ */
+- (void) loadAssets:(dispatch_block_t) completion;
+
 
 /*!
  * @discussion Will show photo picker with animation
@@ -46,6 +54,9 @@
  */
 - (void) setDelegate:(id <MTPhotoPickerDelegate>) delegate;
 
+
+- (void) setButtonItems:(NSArray *)options;
+
 @end
 
 
@@ -53,15 +64,8 @@
 
 @protocol MTPhotoPickerDelegate <NSObject>
 
-/*!
- * @discussion will be called when user hits add photo button
- */
-- (void)photoPickerAddPhoto;
 
-/*!
- * @discussion will be called when user hits add video button
- */
-- (void)photoPickerAddVideo;
+- (void)photoPickerButtonItemClicked:(NSInteger) itemInedx;
 
 
 /*!
