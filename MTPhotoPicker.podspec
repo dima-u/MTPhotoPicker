@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MTPhotoPicker"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "iMessage style photopicker with visual effects."
 
 # This description is used to generate tags and improve search results.
@@ -36,7 +36,4 @@ PhotoPicker allows you to integrate imessage style photo selection view in a sev
 #    'MTPhotoPicker' => ['Pod/Assets/*.png']#,'Pod/Assets/*.xib']
 #  }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

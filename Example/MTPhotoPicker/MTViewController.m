@@ -30,10 +30,16 @@
 -(MTPhotoPicker *)pickerView{
     if(!_pickerView){
         
-        _pickerView = [MTPhotoPicker pickerWithTitle:@"Choose Photo" alternateTitle:@"Attach photos (%ld)" otherTitles:@[@"Open gallery",@"Other title"] cancelTitle:@"Cancel"];
+        _pickerView = [MTPhotoPicker pickerWithTitle:@"Choose Photo" alternateTitle:@"Attach %ld photo" otherTitles:@[@"Open gallery",@"Other title"] cancelTitle:@"Cancel"];
         
         
         [_pickerView setDelegate:self];
+        
+        
+        //optional
+        [_pickerView setThemeColor:[UIColor redColor]];
+        
+        [_pickerView setMaximumSelectCount:2];
     
     }
     return _pickerView;

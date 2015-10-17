@@ -47,6 +47,10 @@
         self.selectView.userInteractionEnabled = NO;
         
         [self addSubview:self.selectView];
+        
+        if(self.themeColor)
+            self.selectView.bodyColor = self.themeColor;
+        
     }
     
     UIImage * thumbnail = [UIImage imageWithCGImage:[representation aspectRatioThumbnail]];

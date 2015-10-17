@@ -20,6 +20,7 @@
 
 - (void) redrawCheckMark;
 
+@property (nonatomic, strong) UIColor * themeColor;
 @end
 
 @protocol MTAttachCollectionCellDelegate <NSObject>

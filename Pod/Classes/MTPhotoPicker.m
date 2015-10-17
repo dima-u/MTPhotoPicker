@@ -54,8 +54,7 @@
     /*!
      *@brief assets that are selected
      */
-    NSMutableSet * markedAssets;
-    
+    NSMutableArray * markedAssets;
     
     __weak id <MTPhotoPickerDelegate> _delegate;
     
@@ -74,6 +73,10 @@
     
     BOOL _assetsLoaded;
     
+    NSInteger _maxSelectCount;
+    
+    UIColor * _themeColor;
+    
 }
 
 
@@ -85,6 +88,8 @@
     });
     return library;
 }
+
+
 
 
 +(instancetype)pickerWithTitle:(NSString *)title alternateTitle:(NSString *)atitle otherTitles:(NSArray *)titles cancelTitle:(NSString *)cTitle{
@@ -113,7 +118,7 @@
     
     _cancelTitle = cTitle;
     
-    [self p_setupUI];
+    
     
     
     
@@ -127,7 +132,7 @@
     
     assets = [NSMutableArray new];
     
-    markedAssets = [NSMutableSet new];
+    markedAssets = [NSMutableArray new];
     
     [self.collectionAttaches registerNib:[UINib nibWithNibName:@"MTAttachCollectionCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"MTAttachCollectionCell"];
     
@@ -146,6 +151,8 @@
 
 
 #pragma mark - KVO view
+
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     
@@ -169,6 +176,17 @@
 
 #pragma mark - public methods
 
+- (void) setMaximumSelectCount:(NSInteger) maxCount{
+
+    _maxSelectCount = maxCount;
+    
+}
+
+
+- (void) setThemeColor:(UIColor *) color{
+    _themeColor = color;
+}
+
 
 - (void) loadAssets:(dispatch_block_t) completion
 {
@@ -187,7 +205,7 @@
     
     assets = [NSMutableArray new];
     
-    markedAssets = [NSMutableSet new];
+    markedAssets = [NSMutableArray new];
     
     __weak id me = self;
     __weak id table = self.collectionAttaches;
@@ -287,6 +305,8 @@
     
     //to save order
     for(ALAsset * asset in assets){
+        
+        
         if([markedAssets containsObject:asset]){
             [_assets addObject:asset];
         }
@@ -358,6 +378,10 @@
         
         
     });
+    
+    
+    if(_themeColor)
+        [button setTitleColor:_themeColor forState:UIControlStateNormal];
     
     [button setBackgroundImage:selectedImage forState:UIControlStateHighlighted];
     [button setBackgroundImage:normalImage forState:UIControlStateNormal];
@@ -431,6 +455,8 @@
 
 - (void) showInView:(UIView *)view{
     
+    [self p_setupUI];
+    
     [self loadAssets:NULL];
     
     [view addSubview:self];
@@ -444,7 +470,7 @@
     
     [self.firstButton setTitle:_selectTitle forState:UIControlStateNormal];
 
-    markedAssets = [NSMutableSet new];
+    markedAssets = [NSMutableArray new];
     
     [self.collectionAttaches reloadData];
     
@@ -471,7 +497,12 @@
     NSInteger cnt = [markedAssets count];
     
     if(cnt > 0){
-        [self.firstButton setTitle:[NSString stringWithFormat:_alternateSelectTitle,(long)cnt] forState:UIControlStateNormal];
+        if([_alternateSelectTitle containsString:@"%ld"])
+            [self.firstButton setTitle:[NSString stringWithFormat:_alternateSelectTitle,(long)cnt] forState:UIControlStateNormal];
+        else
+            [self.firstButton setTitle:_alternateSelectTitle forState:UIControlStateNormal];
+            //_alternateSelectTitle
+        
   //      [self.secondButton setTitle:@"" forState:UIControlStateNormal];
   //      self.secondButton.enabled = NO;
     }else{
@@ -498,6 +529,21 @@
     [self.collectionAttaches scrollToItemAtIndexPath:[self.collectionAttaches indexPathForCell:cell] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     NSIndexPath * path = [self.collectionAttaches indexPathForCell:cell];
     
+    if(_maxSelectCount){
+        if(_maxSelectCount==[markedAssets count]){
+            //should remove first added element
+            
+            ALAsset * asset = [markedAssets objectAtIndex:0];
+            
+            NSInteger assetIndex = [assets indexOfObject:asset];
+            
+            [markedAssets removeObjectAtIndex:0];
+            
+            [self.collectionAttaches reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:assetIndex inSection:0]]];
+            
+        }
+    }
+    
     [markedAssets addObject:[assets objectAtIndex:path.row]];
     [self _attachesCountChanged];
 }
@@ -520,6 +566,9 @@
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MTAttachCollectionCell" forIndexPath:indexPath];
 
     cell.delegate = self;
+    
+    if(_themeColor)
+        cell.themeColor = _themeColor;
     
     [cell setupWithAsset:[assets objectAtIndex:indexPath.row] selected:[markedAssets containsObject:[assets objectAtIndex:indexPath.row]]];
 
