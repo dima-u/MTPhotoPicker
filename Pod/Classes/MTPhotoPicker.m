@@ -208,7 +208,6 @@
     markedAssets = [NSMutableArray new];
     
     __weak id me = self;
-    __weak id table = self.collectionAttaches;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^
                    {

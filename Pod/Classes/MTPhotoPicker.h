@@ -55,8 +55,6 @@
 - (void) setDelegate:(id <MTPhotoPickerDelegate>) delegate;
 
 
-- (void) setButtonItems:(NSArray *)options;
-
 
 /*!
  * @discussion default is 0 when limit not used, if maxCount is set previously checked photos will be unchecked
